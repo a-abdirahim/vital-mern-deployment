@@ -53,7 +53,7 @@ const Trending = ({ products, categories, subCategories }) => {
                 spaceBetween={15}
                 slidesPerView={2}
                 pagination={{ clickable: true }}
-                infinite
+                infinite={"true"}
                 autoplay
                 breakpoints={{
                     950: {
@@ -83,7 +83,7 @@ const Trending = ({ products, categories, subCategories }) => {
                                     : `/allProducts/${categorySlugs[obj.category]}/${subCategorySlugs[obj.subCategory]}/${obj.slug}`
                             } className="product-wrapper">
                                 <div className="product-image">
-                                    <img src={`https://combative-dog-gloves.cyclic.app/public/uploads/products/${obj.productImage}`} alt="product" crossOrigin="anonymous" />
+                                    <img src={`/public/uploads/products/${obj.productImage}`} alt="product" crossOrigin="anonymous" />
                                 </div>
                                 <div className="product-description">
                                     <p className="category">{categoryName}</p>

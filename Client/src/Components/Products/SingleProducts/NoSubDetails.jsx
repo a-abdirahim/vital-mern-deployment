@@ -34,7 +34,7 @@ const NoSubDetails = () => {
     }
 
     const { name: productName, description, productImage } = currentProduct
-    // const imageUrl = `https://combative-dog-gloves.cyclic.app/${productImage}`;
+    // const imageUrl = `http://127.0.0.1:3000/${productImage}`;
 
     return (
         <>

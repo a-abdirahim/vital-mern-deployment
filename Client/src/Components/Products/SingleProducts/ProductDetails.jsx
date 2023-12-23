@@ -40,7 +40,7 @@ const ProductDetails = () => {
             <div className="product-details">
                 <div className="product">
                     <div className="product-image">
-                        <img src={`https://combative-dog-gloves.cyclic.app/public/uploads/products/${productImage}`} alt="product" />
+                        <img src={`/public/uploads/products/${productImage}`} alt="product" />
                     </div>
                     <div className="product-description">
                         <h1 className="product-name">{productName}</h1>

@@ -58,7 +58,7 @@ const RelatedProduct = ({ products, categories, subCategories }) => {
                             relatedProduct.map(obj => {
                                 const subCategoryName = subCategoryMap[obj.subCategory] || "unKnown Category"
 
-                                // const imageUrl = `https://combative-dog-gloves.cyclic.app/${obj.productImage}`;
+                                // const imageUrl = `http://127.0.0.1:3000/${obj.productImage}`;
                                 return <NavLink key={obj._id}
                                     to={subCategoryName === "unKnown Category" ?
                                         `/allProducts/${categorySlugs[obj.category]}/all/${obj.slug}`
@@ -67,7 +67,7 @@ const RelatedProduct = ({ products, categories, subCategories }) => {
                                     onClick={handleOnscroll}>
                                     <div className='related-product'>
                                         <div className="product-image">
-                                            <img src={`https://combative-dog-gloves.cyclic.app/public/uploads/products/${obj.productImage}`} alt="product image" />
+                                            <img src={`/public/uploads/products/${obj.productImage}`} alt="product image" />
                                         </div>
                                         <div className="related-details">
                                             <p className="category">{categoryName}</p>

@@ -62,7 +62,7 @@ const AllSchoolsProducts = () => {
                 paginatedProducts.map(obj => {
                     const categoryName = categoryMap[obj.category] || "unKnown Category";
                     const subCategoryName = subCategoryMap[obj.subCategory] || "unKnown Category";
-                    // const imageUrl = `https://combative-dog-gloves.cyclic.app/${obj.productImage}`;
+                    // const imageUrl = `http://127.0.0.1:3000/${obj.productImage}`;
 
                     return (
                         <NavLink
@@ -77,7 +77,7 @@ const AllSchoolsProducts = () => {
                         >
                             <div className='products-container'>
                                 <div className="product-image">
-                                    <img src={`https://combative-dog-gloves.cyclic.app/public/uploads/products/${obj.productImage}`} alt="microscope" crossOrigin='anonymous' />
+                                    <img src={`/public/uploads/products/${obj.productImage}`} alt="microscope" crossOrigin='anonymous' />
                                 </div>
                                 <div className="product-details">
                                     <p className="category">{categoryName}</p>

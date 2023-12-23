@@ -114,7 +114,7 @@ export const action = async ({ request, params }) => {
 
 
     const productId = params.id
-    let url = `https://combative-dog-gloves.cyclic.app/api/v1/products/${productId}`;
+    let url = `http://127.0.0.1:3000/api/v1/products/${productId}`;
     try {
         const response = await fetch(url, {
             method: method,

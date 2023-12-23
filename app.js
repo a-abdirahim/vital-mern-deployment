@@ -14,24 +14,17 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(
-  cors({
-    origin: [
-      "https://combative-dog-gloves.cyclic.app",
-      // "https://vitalmediquip.co.ke",
-      "https://localhost:5173",
-    ],
-    credentials: true,
-    exposedHeaders: ["Content-Range"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://127.0.0.1:3000"],
+//     credentials: true,
+//     exposedHeaders: ["Content-Range"],
+//   })
+// );
+
+app.use(cors());
 
 // set http headers
-app.use(express.static(path.join(__dirname, "./client/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
-});
 
 app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
@@ -39,6 +32,16 @@ app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/products/subCategory", subCategoryRouter);
 app.use("/api/v1/products/category", categoryRouter);
+
+app.use(express.static(path.join(__dirname, "./Client/dist")));
+app.use(
+  "/public/uploads",
+  express.static(path.join(__dirname, "public/uploads"))
+);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./Client/dist/index.html"));
+});
 
 app.all("*", (req, res, next) => {
   res.status(404).json({

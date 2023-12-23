@@ -104,7 +104,7 @@ function ProductLink({ product, selectedCategory, selectedSubCategory }) {
         >
             <div className='products-container'>
                 <div className="product-image">
-                    <img src={`https://combative-dog-gloves.cyclic.app/public/uploads/products/${product.productImage}`} alt="microscope" crossOrigin='anonymous' />
+                    <img src={`/public/uploads/products/${product.productImage}`} alt="microscope" crossOrigin='anonymous' />
                 </div>
                 <div className="product-details">
                     <p className="category">{selectedCategory.name}</p>

@@ -50,14 +50,14 @@ const Faq = () => {
                     </label>
                     <div className="content">
                         <p>We operate from Monday to Saturday.</p>
-                        <p className="details">
+                        <div className="details">
                             <div className="bullets"></div>
                             <span>Weekdays: 8.00 am to 5.00 pm</span>
-                        </p>
-                        <p className="details">
+                        </div>
+                        <div className="details">
                             <div className="bullets"></div>
                             <span> Saturdays: 9.00 am to 3.00 pm</span>
-                        </p>
+                        </div>
                         <br />
                         <p>
                             Please <a href="/contact-us">contact us</a> before your visit so we can make the necessary preparations for your arrival.</p>
