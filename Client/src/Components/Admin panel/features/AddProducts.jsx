@@ -113,7 +113,7 @@ export const action = async ({ request }) => {
     }
 
 
-    let url = "http://127.0.0.1:3000/api/v1/products/create-products";
+    let url = "https://rich-tan-barnacle-tam.cyclic.app/oducts/create-products";
     const response = await fetch(url, {
         method: method,
         body: productData

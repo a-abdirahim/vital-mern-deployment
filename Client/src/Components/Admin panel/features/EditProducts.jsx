@@ -14,7 +14,7 @@ const EditProducts = () => {
     const allProducts = products
 
     const handleDelete = (id) => {
-        axios.delete("http://127.0.0.1:3000/api/v1/products/" + id)
+        axios.delete("https://rich-tan-barnacle-tam.cyclic.app/oducts/" + id)
             .then(() => {
                 toast.success("product deleted succesfully")
                 setTimeout(() => {
