@@ -14,16 +14,16 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(
-  cors({
-    origin: [
-      "http://127.0.0.1:3000",
-      "https://rich-tan-barnacle-tam.cyclic.app/",
-    ],
-    credentials: true,
-    exposedHeaders: ["Content-Range"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       "http://127.0.0.1:3000",
+//       "https://rich-tan-barnacle-tam.cyclic.app/",
+//     ],
+//     credentials: true,
+//     exposedHeaders: ["Content-Range"],
+//   })
+// );
 
 app.use(cors());
 
